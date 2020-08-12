@@ -30,8 +30,9 @@ This project is created by the joint efforts of
 
 ### Dataset Used:
 The dataset that we have used here is [kaggle 2018 Data Science Bowl](https://www.kaggle.com/c/data-science-bowl-2018) contest dataset,which contains 670 images of cells along with its masks.
-Each image in the dataset is assigned with an average of 20 images that adds up to become the mask of that single image and there are such 670 images in the dataset.Thus,joining the fragmented images into a single mask each time we run the notebook was a hectic task indeed. As a solution, for our own ease we have  saved the created masked files into a separate folder along with the image. Such that we can save the computation time required to join those masks into a single mask eachtime we run the notebook. The link to that folder structure which contains the dataset for training along with separate image for testing  is provided here.
-##### [dataset]()
+Each image in the dataset is assigned with an average of 20 images that adds up to become the mask of that single image and there are such 670 images in the dataset.Thus,joining the fragmented images into a single mask each time we run the notebook was a hectic task indeed. As a solution, for our own ease we have  saved the created masked files into a separate folder along with the image. Such that we can save the computation time required to join those masks into a single mask eachtime we run the notebook. The link to that folder structure which contains the dataset for training along with separate image for testing  is [provided here.](https://github.com/Subham2901/Nuclei-Cell-segmentaion/tree/master/Data)
+#### Some sample images of the dataset is present here:
+![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/dataset.png)
 
 
 ### Augmentation and Preprocessing:
