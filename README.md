@@ -38,14 +38,13 @@ Each image in the dataset is assigned with an average of 20 images that adds up 
 ### Augmentation and Preprocessing:
 The training data was augmented on the fly using the [Albumentations library](https://albumentations.ai/).
 A strong combination of different types of image augmentations were applied with varied probabilities. They were:
-* Random Flips.
-* Transpose.
-* Scale, Shift & rotate.
-* Random Rotations.
-* Optical Distortion.
-* Grid Distortion.
-* Elastic Transform.
-* RGB Shift.
+* CLAHE.
+* Rotate.
+* Flip.
+* GaussNoise.
+* HorizontalFlip.
+* VerticalFlip.
+* HueSaturationValue.
 * Random Gamma.
 * Random Brightness & contrast.
 
@@ -53,8 +52,11 @@ Along with the above mentioned augmentations, every image in the training and te
 
 Some examples of augmented images and masks are given below.
 Augmented Training Images
+--------------------------------------------------------------
+![]()
 
 Augmented Training Masks
+--------------------------------------------------------------![]()
 
 [Back to top](#Nuclei-Cell-Segmentaion)
 
