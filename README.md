@@ -1,7 +1,10 @@
 # Nuclei Cell Segmentaion
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-A semantic model for nuclei cell segmentation using U-Net++
+
+
+
+## A semantic model for nuclei cell segmentation using U-Net++
 
 ## Overview
 * [Contributors](#Contributors)
