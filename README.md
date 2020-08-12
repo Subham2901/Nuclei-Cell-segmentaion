@@ -50,19 +50,23 @@ A strong combination of different types of image augmentations were applied with
 
 Along with the above mentioned augmentations, every image in the training and testing sets underwent a Histogram Equalization preprocessing step, i.e, CLAHE (Contrast Limited Adaptive Histogram Equalization).
 
-Some examples of augmented images and masks are given below.
-Augmented Training Images
+##### Augmented Training Images along with its masks:
 --------------------------------------------------------------
-![]()
+![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/Augmented.JPG)
 
-Augmented Training Masks
---------------------------------------------------------------![]()
+
 
 [Back to top](#Nuclei-Cell-Segmentaion)
 
 
 ### Network Architecture:
+When it comes to medical imaging, the margin of error is almost negligible. One small mistake can lead to even fatal outcomes. Thus, algorithms designed for medical imaging must achive high performannce and accuracy even if the total no. of training samples upon which the data is trained is not enough or satisfactory,to solve this issue ,[UNet](https://arxiv.org/abs/1505.04597) was introduced in the world of AI based medical imaging world, and it gave unexpetedly good results.The __model architecture__ that we have used here is known as [UNet++](https://arxiv.org/abs/1807.10165).The UNet++ architecture has three additions in comparison to the classic UNet:
+* __Redesigned skip pathways -__ These are added to bridge the semantic gap between the encoder and the decoder subpaths.As a result, the optimiser can optimise it more easily.
+* __Dense skip connections -__ The Dense blocks used here is adopted from the DenseNet with the purpose to improve the segmentation accuracy and improves the gradient flow.
 
+* __Deep supervision -__ The soul purpose of the deep supervison is to maintain the balance between the speed(inference) and perpormance of the model as per our requirements. There are mainly two modes that deep supervison has:
+* __Accurate Mode-__ In this case the output from all the segmentation branches are averaged.
+* __Fast Mode -__ In this mode the  final segmentation map is selected on the basis of prediction metric from one of the segmentation block.
 ### Loss Function and Optimizer:
 
 #### Loss Function
