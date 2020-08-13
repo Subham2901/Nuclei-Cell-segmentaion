@@ -65,14 +65,27 @@ When it comes to medical imaging, the margin of error is almost negligible. One 
 * __Dense skip connections -__ The Dense blocks used here is adopted from the DenseNet with the purpose to improve the segmentation accuracy and improves the gradient flow.
 
 * __Deep supervision -__ The soul purpose of the deep supervison is to maintain the balance between the speed(inference) and perpormance of the model as per our requirements. There are mainly two modes that deep supervison has:
-__*i) Accurate Mode-__ In this case the output from all the segmentation branches are averaged.
-__*ii) Fast Mode -__ In this mode the  final segmentation map is selected on the basis of prediction metric from one of the segmentation block.
+* Accurate Mode-__ In this case the output from all the segmentation branches are averaged.
+* Fast Mode -__ In this mode the  final segmentation map is selected on the basis of prediction metric from one of the segmentation block.
 ![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/UNET%2B%2B(gless).JPG)
 ### Loss Function and Optimizer:
+The loss function and the optimizer that we have used here are BCE DICE LOSE and ADAM AND BEYOND respectively.
+#### Loss Function-
+The loss function that we have used here is a combination of both [Binary Cross Entropy](https://www.tensorflow.org/api_docs/python/tf/keras/losses/BinaryCrossentropy) loss function and [Dice](https://arxiv.org/abs/1606.04797) loss function.
+"""
+def dice_loss(y_true, y_pred):
+    smooth = 1.
+    y_true = K.flatten(y_true)
+    y_pred = K.flatten(y_pred)
+    intersection = y_true * y_pred
+    score = (2. * K.sum(intersection) + smooth) / (K.sum(y_true) + K.sum(y_pred) + smooth)
+    return 1. - score
 
-#### Loss Function
+def bce_dice_loss(y_true, y_pred):
+    return binary_crossentropy(y_true, y_pred) + dice_loss(y_true, y_pred)
+"""
 
-#### Optimizer
+#### Optimizer:-
 
 ### Training setup:
 
