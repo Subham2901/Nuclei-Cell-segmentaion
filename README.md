@@ -121,16 +121,33 @@ The learning rate we have used here is not constant throughout the training of t
 The network was trained using the above mentioned setup for  epochs with a batch size of ```10``` and input image size ```256 x 256 x 3```. Total time taken for training is 15 mins.
 #### Training VS Validation Accuracy Curve:
 -----------------------------------------------------------------------------------------------------------------------------------------
-<img src="images/acc_curve.JPG"width=100)
+![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/tree/master/images)
 #### Training VS Validation Loss Curve:
 -----------------------------------------------------------------------------------------------------------------------------------------
-![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/val_acc.JPG|width=100)
+![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/val_acc.JPG)
 -----------------------------------------------------------------------------------------------------------------------------------------
 [Back to top](#Nuclei-Cell-Segmentaion)
 ### Evaluation Metric:
+[F1-Score](https://en.wikipedia.org/wiki/F1_score) was used along with [IOU](https://www.tensorflow.org/api_docs/python/tf/keras/metrics/MeanIoU#:~:text=IOU%20is%20defined%20as%20follows,of%200%20to%20mask%20values.) and [AUC](https://www.tensorflow.org/api_docs/python/tf/keras/metrics/AUC) for the evaluation of the results.
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 [Back to top](#Nuclei-Cell-Segmentaion)
 
 ### Results:
+The following table shows the results that we have achieved:
+F1-Score | AUC | IoU|
+--- | --- | --- |
+89.0 | 93.0 | 81.0|
+##### Images:
+-----------------------------------------------------------------------------------------------------------------------------------------
+![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/P_img.JPG)
+#### Masks:
+-----------------------------------------------------------------------------------------------------------------------------------------
+![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/p_masks.JPG)
+
+#### Predicted Masks:
+-----------------------------------------------------------------------------------------------------------------------------------------
+![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/pp.JPG)
+
 
