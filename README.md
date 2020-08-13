@@ -67,7 +67,7 @@ When it comes to medical imaging, the margin of error is almost negligible. One 
 * __Deep supervision -__ The soul purpose of the deep supervison is to maintain the balance between the speed(inference) and perpormance of the model as per our requirements. There are mainly two modes that deep supervison has:
 * __Accurate Mode-__ In this case the output from all the segmentation branches are averaged.
 * __Fast Mode -__ In this mode the  final segmentation map is selected on the basis of prediction metric from one of the segmentation block.
-![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/UNET%2B%2B.JPG)
+![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/UNET%2B%2B(gless).JPG)
 ### Loss Function and Optimizer:
 
 #### Loss Function
