@@ -5,7 +5,7 @@
 
 
 
-## A semantic model for nuclei cell segmentation using U-Net++
+## A semantic segmentation model for nucleus cell segmentation using U-Net++
 
 ## Overview
 -----------------------------------------------------------------------------------------------------------------------------------------
