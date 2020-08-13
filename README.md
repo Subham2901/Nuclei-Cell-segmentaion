@@ -78,8 +78,10 @@ When it comes to medical imaging, the margin of error is almost negligible. One 
 * Fast Mode -__ In this mode the  final segmentation map is selected on the basis of prediction metric from one of the segmentation block.
 ![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/UNET%2B%2B(gless).JPG)
 ### Loss Function and Optimizer:
+-----------------------------------------------------------------------------------------------------------------------------------------
 The loss function and the optimizer that we have used here are BCE DICE LOSE and ADAM AND BEYOND respectively.
 #### Loss Function-
+
 The loss function that we have used here is a combination of both [Binary Cross Entropy](https://www.tensorflow.org/api_docs/python/tf/keras/losses/BinaryCrossentropy) loss function and [Dice](https://arxiv.org/abs/1606.04797) loss function.
 
 ```Python
@@ -100,17 +102,26 @@ def bce_dice_loss(y_true, y_pred):
 The optimizer that we have used here to optimize our model is [ADAM and Beyond](https://arxiv.org/abs/1904.09237?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%253A+arxiv%252FQSXk+%2528ExcitingAds%2521+cs+updates+on+arXiv.org%2529). Which uses a new exponential moving average AMSGRAD. The AMSGRAD uses a smaller learning rate in comparison to ADAM. In case of ADAM the decrement or decay of learning rate is not guaranteed where as AMSGRAD  uses smaller learning rates , it maintains the maximum of  all the learning rates until the present time step and uses that maximum value for normalizing the running average of the gradient instead of learning rate in ADAM or RMSPROP. Thus, it converges better than ADAM or RMSPROP
 
 #### Learning Rate:
+-----------------------------------------------------------------------------------------------------------------------------------------
 The learning rate we have used here is not constant throughout the training of the data, instead we have used a learning rate schedular, which increases/decreases the learning rate gradually after every fixed set of epochs such that  we can attain the optimum convergence by the end of our training of the data.
 
 ### Training setup:
+-----------------------------------------------------------------------------------------------------------------------------------------
 * GPU: Nvidia P100 16GB
 * CPU: Intel Xeon
 * RAM: 12GB DDR4
 
 The network was trained using the above mentioned setup for  epochs with a batch size of ```10``` and input image size ```256 x 256 x 3```. Total time taken for training is 15 mins.
-
+#### Training VS Validation Accuracy Curve:
+-----------------------------------------------------------------------------------------------------------------------------------------
+![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/acc_curve.JPG)
+#### Training VS Validation Loss Curve:
+-----------------------------------------------------------------------------------------------------------------------------------------
+![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/val_acc.JPG)
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 ### Evaluation Metric:
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 [Back to top](#Retinal-Vessel-Segmentation)
 
