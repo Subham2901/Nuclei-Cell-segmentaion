@@ -141,15 +141,13 @@ F1-Score | AUC | IoU|
 89.0 | 93.0 | 81.0|
 ##### Images:
 -----------------------------------------------------------------------------------------------------------------------------------------
-
-
-<img src='images/P_img.JPG'width=100>
+![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/P_img.JPG)
 #### Masks:
 -----------------------------------------------------------------------------------------------------------------------------------------
-
 ![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/p_masks.JPG)
+
 #### Predicted Masks:
 -----------------------------------------------------------------------------------------------------------------------------------------
-
 ![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/pp.JPG)
+
 
