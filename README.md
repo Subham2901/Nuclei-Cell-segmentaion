@@ -121,7 +121,7 @@ The learning rate we have used here is not constant throughout the training of t
 The network was trained using the above mentioned setup for  epochs with a batch size of ```10``` and input image size ```256 x 256 x 3```. Total time taken for training is 15 mins.
 #### Training VS Validation Accuracy Curve:
 -----------------------------------------------------------------------------------------------------------------------------------------
-![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/acc_curve.JPG| width=100)
+<img src="images/acc_curve.JPG"width=100)
 #### Training VS Validation Loss Curve:
 -----------------------------------------------------------------------------------------------------------------------------------------
 ![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/val_acc.JPG|width=100)
