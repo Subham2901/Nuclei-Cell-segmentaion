@@ -65,8 +65,8 @@ When it comes to medical imaging, the margin of error is almost negligible. One 
 * __Dense skip connections -__ The Dense blocks used here is adopted from the DenseNet with the purpose to improve the segmentation accuracy and improves the gradient flow.
 
 * __Deep supervision -__ The soul purpose of the deep supervison is to maintain the balance between the speed(inference) and perpormance of the model as per our requirements. There are mainly two modes that deep supervison has:
-* __Accurate Mode-__ In this case the output from all the segmentation branches are averaged.
-* __Fast Mode -__ In this mode the  final segmentation map is selected on the basis of prediction metric from one of the segmentation block.
+__*i) Accurate Mode-__ In this case the output from all the segmentation branches are averaged.
+__*ii) Fast Mode -__ In this mode the  final segmentation map is selected on the basis of prediction metric from one of the segmentation block.
 ![](https://github.com/Subham2901/Nuclei-Cell-segmentaion/blob/master/images/UNET%2B%2B(gless).JPG)
 ### Loss Function and Optimizer:
 
