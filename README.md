@@ -13,6 +13,7 @@
 * [Augmentation & Preprocessing](#Augmentation-and-Preprocessing)
 * [Network Architecture](#Network-Architecture)
 * [Loss Function & Optimizer](#Loss-Function-and-Optimizer)
+* [Learning Rate](#Learning-Rate)
 * [Training setup](#Training-setup)
 * [Evaluation Metric](#Evaluation-Metric)
 * [Results](#Results)
@@ -88,8 +89,18 @@ def bce_dice_loss(y_true, y_pred):
 ```
 
 #### Optimizer:-
+The optimizer that we have used here to optimize our model is [ADAM and Beyond](https://arxiv.org/abs/1904.09237?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%253A+arxiv%252FQSXk+%2528ExcitingAds%2521+cs+updates+on+arXiv.org%2529). Which uses a new exponential moving average AMSGRAD. The AMSGRAD uses a smaller learning rate in comparison to ADAM. In case of ADAM the decrement or decay of learning rate is not guaranteed where as AMSGRAD  uses smaller learning rates , it maintains the maximum of  all the learning rates until the present time step and uses that maximum value for normalizing the running average of the gradient instead of learning rate in ADAM or RMSPROP. Thus, it converges better than ADAM or RMSPROP
+
+#### Learning Rate:
+The learning rate we have used here is not constant throughout the training of the data, instead we have used a learning rate schedular, which increases/decreases the learning rate gradually after every fixed set of epochs such that  we can attain the optimum convergence by the end of our training of the data.
 
 ### Training setup:
+* GPU: Nvidia P100 16GB
+* CPU: Intel Xeon
+* RAM: 12GB DDR4
+
+The network was trained using the above mentioned setup for  epochs with a batch size of ```10``` and input image size ```256 x 256 x 3```. Total time taken for training is 15 mins.
+
 
 ### Evaluation Metric:
 
