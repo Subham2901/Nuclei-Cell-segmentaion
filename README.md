@@ -72,7 +72,7 @@ When it comes to medical imaging, the margin of error is almost negligible. One 
 The loss function and the optimizer that we have used here are BCE DICE LOSE and ADAM AND BEYOND respectively.
 #### Loss Function-
 The loss function that we have used here is a combination of both [Binary Cross Entropy](https://www.tensorflow.org/api_docs/python/tf/keras/losses/BinaryCrossentropy) loss function and [Dice](https://arxiv.org/abs/1606.04797) loss function.
-"""
+'''Python
 def dice_loss(y_true, y_pred):
     smooth = 1.
     y_true = K.flatten(y_true)
@@ -83,7 +83,7 @@ def dice_loss(y_true, y_pred):
 
 def bce_dice_loss(y_true, y_pred):
     return binary_crossentropy(y_true, y_pred) + dice_loss(y_true, y_pred)
-"""
+'''
 
 #### Optimizer:-
 
